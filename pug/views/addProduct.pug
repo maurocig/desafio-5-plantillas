@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Agregar Producto
+		link(rel="stylesheet", href="../public/styles.css")
+	body 
+		h1 Agregar Producto
+		form(action="/productos" method="post") 
+			label(for='title') Nombre:
+			input(name='title', type='text', style='display: block;')
+			label(for='price', style='margin-top: 1rem;') Precio:
+			input(name='price', type='number', style='display: block;')
+			label(for='thumbnail', style='margin-top: 1rem;') Imagen:
+			input(name='thumbnail', type='text', style='display: block; ')
+			button(type="submit", style='margin-top: 1rem;') Enviar
+		a(href='/productos' style='margin-top:2rem;') Ver todos
