@@ -9,5 +9,15 @@ form input {
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	background-color: darkgray;
+	background-color: red;
+	/* background-color: darkgray; */
+}
+
+.thumbnail {
+	width: 100%;
+}
+
+.thumbnail img {
+	width: 100%;
+	object-fit: contain;
 }

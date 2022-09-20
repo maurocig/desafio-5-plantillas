@@ -7,17 +7,8 @@ const Products = require('./models/Products');
 const app = express();
 const PORT = 8080 || process.env.PORT;
 
-// Handlebars config
-const { engine } = require('express-handlebars');
-app.engine('hbs', engine({
-	extname: 'hbs',
-	defaultLayout: 'main.hbs',
-	layoutsDir: path.resolve(__dirname, './views/layouts'),
-	partialsDir: path.resolve(__dirname, './views/partials'),
-}))
 app.set('views', './views');
-app.set('view engine', 'hbs');
-
+app.set('view engine', 'pug');
 
 // Middleware
 app.use(express.json());
@@ -28,17 +19,18 @@ const products = new Products('data.json');
 
 // Routes
 app.get('/', async (req, res) => {
-	res.render('index', { mostrarForm: true });
+	res.render('addProduct');
 })
 
 app.get('/productos', async (req, res) => {
-	res.render('index', { mostrarProductos: true, products: await products.getAll() });
+	const listaProductos = await products.getAll();
+	res.render('index', { listaProductos });
 })
 
 app.get('/productos/:id', async (req, res) => {
 	const { id } = req.params;
 	const product = await products.getById(id);
-	res.render('index', ({ mostrarDetalle: true, product }));
+	res.render('itemDetail', { product });
 })
 
 app.post('/productos', async (req, res) => {
