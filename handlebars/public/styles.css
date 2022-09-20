@@ -1,0 +1,13 @@
+form {
+	margin-bottom: 1rem;
+}
+
+form input {
+	display: block;
+	margin-bottom: 1rem;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: darkgray;
+}

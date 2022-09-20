@@ -1,0 +1,10 @@
+{{#each products}}
+<div style="margin-bottom: 3rem;">
+	<a href='/productos/{{this.id}}'>
+		<h4>{{this.title}}</h4>
+	</a>
+	<div class="thumbnail" style="width: 100%; border: solid red">
+		<img src={{this.thumbnail}} alt={{this.id}} style="object-fit: contain; width: 100%">
+	</div>
+</div>
+{{/each}}

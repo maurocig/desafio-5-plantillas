@@ -1,0 +1,17 @@
+{{#if mostrarProductos}}
+<h1>Todos los productos</h1>
+<a href="/">Agregar producto</a>
+<div>
+	{{> products}}
+</div>
+{{/if}}
+
+{{#if mostrarForm}}
+<div>
+	{{> form}}
+</div>
+{{/if}}
+
+{{#if mostrarDetalle}}
+{{> itemDetail}}
+{{/if}}
