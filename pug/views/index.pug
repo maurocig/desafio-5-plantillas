@@ -6,15 +6,28 @@ html(lang="en")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		title PUG
-		link(rel="stylesheet", href="../public/styles.css")
+		link(rel="stylesheet", href="/styles.css")
+
 
 	body(style='font-family: Arial, sans-serif;')
+
 		h1(style='color:green;') Todos los productos
 
 		a(href="/") Agregar producto
 
-		ul 
-			each item in listaProductos
-				a(href=`/productos/${item.id}`) 
-					li= `${item.title}`
-
+		table.table(style='width: 100%; margin-top: 2rem;')
+			thead
+				tr
+					th(scope='col') ID
+					th(scope='col') Nombre
+					th(scope='col') Precio
+					th(scope='col') Imagen
+			tbody
+				each item in listaProductos
+					tr
+						th(scope='row')= item.id
+						td 
+							a(href=`/productos/${item.id}`)=item.title
+						td= item.price
+						td 
+							img(src= item.thumbnail, alt= item.title, style='object-fit: contain; height: 20px;')
