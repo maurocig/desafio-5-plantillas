@@ -46,5 +46,11 @@
     "price": "3",
     "thumbnail": "https://m.media-amazon.com/images/I/61h08Dha+HS._AC_SY355_.jpg",
     "id": 17
+  },
+  {
+    "title": "iPad",
+    "price": "400",
+    "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-mini-select-202109_FMT_WHH?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=1631751019000",
+    "id": 18
   }
 ]
