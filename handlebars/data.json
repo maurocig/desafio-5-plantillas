@@ -46,5 +46,11 @@
     "price": "2000",
     "thumbnail": "https://cdn.pocket-lint.com/r/s/970x/assets/images/152137-laptops-review-apple-macbook-pro-2020-review-image1-pbzm4ejvvs.jpg",
     "id": 17
+  },
+  {
+    "title": "Cable USB",
+    "price": "25",
+    "thumbnail": "https://m.media-amazon.com/images/I/61Dwrp7qfCL._AC_SX679_.jpg",
+    "id": 18
   }
 ]
