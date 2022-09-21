@@ -12,14 +12,35 @@
 <body>
 	<h1>Todos los productos</h1>
 	<a href="/">Agregar Producto</a>
-	<ul>
-		<% productsList.forEach((product)=>{ %>
-		<li>
-			<a href="/productos/<%=product.id%>"> <%- product.title %> </a>
-		</li>
-		<% }) %>
-	</ul>
 
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Precio</th>
+				<th>Imagen</th>
+			</tr>
+
+			<% productsList.forEach((product)=>{ %>
+			<tr>
+				<td><%= product.id %> </td>
+				<td>
+					<a href="/productos/{{this.id}}">
+						<%= product.title %>
+					</a>
+				</td>
+				<td><%= product.price %> </td>
+				<td>
+					<div class="thumbnail">
+						<img src=<%= product.thumbnail %> alt="">
+					</div>
+				</td>
+			</tr>
+			<% }) %>
+
+		</thead>
+	</table>
 </body>
 
 </html>

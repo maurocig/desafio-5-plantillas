@@ -9,14 +9,30 @@ form input {
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	/* background-color: red; */
 	background-color: darkgray;
 }
 
-.detail-thumbnail {
-	width: 100%;
+.link-add {
+	margin-bottom: 2rem;
 }
 
-.detail-thumbnail img {
-	object-fit: contain;
+.thumbnail {
 	width: 100%;
+	max-height: 50px;
+}
+
+.thumbnail img {
+	object-fit: contain;
+	max-height: 50px;
+}
+
+table {
+	width: 100%;
+	margin-top: 2rem;
+}
+
+table tr td {
+	text-align: center;
+	background-color: gray;
 }
